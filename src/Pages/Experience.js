@@ -6,6 +6,7 @@ import { Typography } from "@mui/material";
 import List from "@mui/material/List";
 import { useMediaQuery } from "@mui/material";
 import CustomListItem from "../Components/CustomListItem/CustomListItem";
+import styled from "styled-components";
 
 const TabPanel = props => {
   const { children, value, index } = props;
@@ -38,15 +39,15 @@ const Experience = () => {
           orientation={mediumViewport ? "vertical" : "horizontal"}
           value={value}
           onChange={handleChange}
-          textColor="primary"
           variant="scrollable"
           indicatorColor="secondary"
-          style={{ margin: "30px" }}
+          style={{ margin: "10px" }}
+          allowScrollButtonsMobile={true}
           sx={{ borderRight: 1, borderColor: "divider" }}>
-          <Tab label="Applied Visions" />
-          <Tab label="Manic Kat Records" />
-          <Tab label="Precipart" />
-          <Tab label="Rink Management Services" />
+          <CustomTab label="Applied Visions" />
+          <CustomTab label="Manic Kat Records" />
+          <CustomTab label="Precipart" />
+          <CustomTab label="Rink Management Services" />
         </Tabs>
         <TabPanel value={value} index={0}>
           <Typography variant="h5">Frontend Developer</Typography>
@@ -128,3 +129,7 @@ const Experience = () => {
 };
 
 export default Experience;
+
+const CustomTab = styled(Tab)`
+  color: #ffffff !important;
+`;

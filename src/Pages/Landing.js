@@ -18,9 +18,11 @@ const Landing = () => {
             I'm a New York based Software Developer specializing in building responsive web based experiences.
           </Typography>
         </div>
-        <Button color="secondary" variant="outlined">
-          Check out my GitHub!
-        </Button>
+        <a href="https://github.com/BryanBorge" target="_blank" rel="noopener">
+          <Button color="secondary" variant="outlined">
+            Check out my GitHub!
+          </Button>
+        </a>
       </div>
     </Box>
   );

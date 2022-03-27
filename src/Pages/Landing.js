@@ -10,7 +10,7 @@ const Landing = () => {
         <Typography variant="p" style={{ marginBottom: "0" }}>
           Hi, my name is
         </Typography>
-        <Typography variant="h3" style={{ marginTop: "0", marginBottom: "0" }}>
+        <Typography variant="h3" style={{ marginTop: "0", marginBottom: "0" }} color="secondary">
           Bryan Borgesano.
         </Typography>
         <div style={{ maxWidth: "540px", marginTop: "20px", marginBottom: "20px" }}>
@@ -18,7 +18,7 @@ const Landing = () => {
             I'm a New York based Software Developer specializing in building responsive web based experiences.
           </Typography>
         </div>
-        <Button color="inherit" variant="outlined">
+        <Button color="secondary" variant="outlined">
           Check out my GitHub!
         </Button>
       </div>

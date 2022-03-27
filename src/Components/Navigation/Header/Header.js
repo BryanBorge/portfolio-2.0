@@ -13,7 +13,11 @@ const Header = () => {
 
   return (
     <Box sx={{ flexGrow: 1, pb: 3 }}>
-      <StyledAppBar position="fixed" color="transparent" elevation={0} sx={{ pl: "20px", pr: "20px" }}>
+      <StyledAppBar
+        position="fixed"
+        style={{ backgroundColor: "rgb(36, 35, 51, .8)" }}
+        elevation={0}
+        sx={{ pl: "20px", pr: "20px" }}>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             BB
@@ -25,7 +29,7 @@ const Header = () => {
               <NavItem text="Projects" />
             </Box>
           )}
-          <Button color="inherit" variant="outlined" style={{ textTransform: "none !important" }}>
+          <Button color="secondary" variant="outlined" style={{ textTransform: "none !important" }}>
             Resume
           </Button>
         </Toolbar>

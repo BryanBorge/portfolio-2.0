@@ -8,7 +8,7 @@ import { useMediaQuery } from "@mui/material";
 import CustomListItem from "../Components/CustomListItem/CustomListItem";
 
 const TabPanel = props => {
-  const { children, value, index, ...other } = props;
+  const { children, value, index } = props;
 
   return value === index && <Box sx={{ p: 5 }}>{children}</Box>;
 };

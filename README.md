@@ -10,5 +10,6 @@
 </p>
 <p align="center">
  2.0 will be hosted on its own domain. No more github.io.
+  (Netlify link is for testing. Final will be a custom domain)
 </p>
 

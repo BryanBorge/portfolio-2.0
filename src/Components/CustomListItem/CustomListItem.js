@@ -8,9 +8,9 @@ const CustomListItem = ({ text, maxWidth }) => {
   return (
     <ListItem style={{ maxWidth: maxWidth }}>
       <ListItemIcon>
-        <ArrowForwardIosIcon fontSize="small" />
+        <ArrowForwardIosIcon fontSize="small" color="secondary" />
       </ListItemIcon>
-      <ListItemText primary={text} />
+      <ListItemText primary={text} color="primary" />
     </ListItem>
   );
 };

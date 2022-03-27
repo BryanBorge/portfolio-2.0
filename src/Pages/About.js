@@ -1,7 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import { Typography } from "@mui/material";
+import { List, Typography } from "@mui/material";
 import CustomListItem from "../Components/CustomListItem/CustomListItem";
 
 const AboutMe = () => {
@@ -30,14 +30,18 @@ const AboutMe = () => {
         </Typography>
         <Grid container>
           <Grid item xs={12} sm={6}>
-            <CustomListItem text="Javascript (jQuery, ES6)" />
-            <CustomListItem text="React" />
-            <CustomListItem text="Material UI" />
+            <List>
+              <CustomListItem text="Javascript (jQuery, ES6)" />
+              <CustomListItem text="React" />
+              <CustomListItem text="Material UI" />
+            </List>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <CustomListItem text="Git / BitBucket" />
-            <CustomListItem text="SQL Server" />
-            <CustomListItem text="C# ASP.Net" />
+            <List>
+              <CustomListItem text="Git / BitBucket" />
+              <CustomListItem text="SQL Server" />
+              <CustomListItem text="C# ASP.Net" />
+            </List>
           </Grid>
         </Grid>
       </div>

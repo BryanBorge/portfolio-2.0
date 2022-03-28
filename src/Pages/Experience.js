@@ -7,6 +7,7 @@ import List from "@mui/material/List";
 import { useMediaQuery } from "@mui/material";
 import CustomListItem from "../Components/CustomListItem/CustomListItem";
 import styled from "styled-components";
+import { SECONDARY_COLOR } from "../theme/contants";
 
 const TabPanel = props => {
   const { children, value, index } = props;
@@ -42,7 +43,8 @@ const Experience = () => {
           variant="scrollable"
           indicatorColor="secondary"
           style={{ margin: "10px" }}
-          allowScrollButtonsMobile={true}
+          scrollButtons="auto"
+          TabScrollButtonProps={{ sx: { color: SECONDARY_COLOR } }}
           sx={{ borderRight: 1, borderColor: "divider" }}>
           <CustomTab label="Applied Visions" />
           <CustomTab label="Manic Kat Records" />

@@ -29,9 +29,14 @@ const Header = () => {
               <NavItem text="Projects" />
             </Box>
           )}
-          <Button color="secondary" variant="outlined" style={{ textTransform: "none !important" }}>
-            Resume
-          </Button>
+          <a
+            href="https://docs.google.com/document/d/1ZaOCL9HNV2RNFFeiTGApiCXvs2RKhgyno198-pxQPgQ/edit?usp=sharing"
+            target="_blank"
+            rel="noopener">
+            <Button color="secondary" variant="outlined" style={{ textTransform: "none !important" }}>
+              Resume
+            </Button>
+          </a>
         </Toolbar>
       </StyledAppBar>
     </Box>

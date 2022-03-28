@@ -71,7 +71,7 @@ const AboutMe = () => {
           style={{
             borderRadius: "50%",
             border: `2px solid ${PRIMARY_COLOR}`,
-            height: "225px",
+            height: "250px",
           }}
           alt="My Headshot"
           src="https://avatars.githubusercontent.com/u/34038688?v=4"

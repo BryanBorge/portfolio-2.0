@@ -43,7 +43,7 @@ const Experience = () => {
           variant="scrollable"
           indicatorColor="secondary"
           style={{ margin: "10px" }}
-          scrollButtons="auto"
+          allowScrollButtonsMobile={true}
           TabScrollButtonProps={{ sx: { color: SECONDARY_COLOR } }}
           sx={{ borderRight: 1, borderColor: "divider" }}>
           <CustomTab label="Applied Visions" />

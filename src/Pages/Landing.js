@@ -7,20 +7,20 @@ const Landing = () => {
   return (
     <Box display="flex" alignItems="center" justifyContent="center" sx={{ ml: 10, mr: 10, mt: 5, mb: 20 }}>
       <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", height: "100%" }}>
-        <Typography variant="p" style={{ marginBottom: "0" }}>
+        <Typography variant="h5" gutterBottom color="secondary">
           Hi, my name is
         </Typography>
-        <Typography variant="h3" style={{ marginTop: "0", marginBottom: "0" }} color="secondary">
+        <Typography variant="h3" style={{ fontSize: "60px" }} gutterBottom>
           Bryan Borgesano.
         </Typography>
-        <div style={{ maxWidth: "540px", marginTop: "20px", marginBottom: "20px" }}>
+        <div style={{ maxWidth: "540px", paddingBottom: "25px" }}>
           <Typography variant="p">
             I'm a New York based Software Developer specializing in building responsive web based experiences.
           </Typography>
         </div>
         <a href="https://github.com/BryanBorge" target="_blank" rel="noopener">
-          <Button color="secondary" variant="outlined">
-            Check out my GitHub!
+          <Button color="secondary" variant="outlined" style={{ width: "225px", height: "50px" }}>
+            Check out my GitHub
           </Button>
         </a>
       </div>

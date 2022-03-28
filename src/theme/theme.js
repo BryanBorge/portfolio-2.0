@@ -29,7 +29,7 @@ export const theme = {
     },
     p: {
       fontFamily: "Poppins",
-      fontSize: "16px",
+      fontSize: "18px",
       color: "#FFFFFF",
     },
     subtitle1: {
@@ -42,6 +42,7 @@ export const theme = {
     },
     body1: {
       fontFamily: "Poppins",
+      fontSize: "16px",
       color: "#FFFFFF",
     },
     body2: {

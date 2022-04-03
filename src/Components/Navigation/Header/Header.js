@@ -9,7 +9,6 @@ import { useMediaQuery } from "@mui/material";
 import NavItem from "../NavItem/NavItem";
 import MotionButton from "../../MotionButton/MotionButton";
 import { AnimateSharedLayout } from "framer-motion";
-import classes from "../Navigation.module.css";
 
 const Header = () => {
   const mediumViewport = useMediaQuery("(min-width:768px)");
@@ -17,7 +16,7 @@ const Header = () => {
   const [selected, setSelected] = useState(null);
 
   return (
-    <Box sx={{ flexGrow: 1, pb: 3 }}>
+    <Box sx={{ flexGrow: 1, pb: 8 }}>
       <StyledAppBar
         position="fixed"
         style={{ backgroundColor: "rgb(36, 35, 51, .8)" }}
@@ -28,20 +27,18 @@ const Header = () => {
             BB
           </Typography>
           {mediumViewport && (
-            <div className={classes.underlinedMenu}>
-              <Box sx={{ display: "flex", flexDirection: "row" }}>
-                <AnimateSharedLayout>
-                  {navItems.map((item, index) => (
-                    <NavItem
-                      text={item}
-                      key={index}
-                      selected={selected === index}
-                      onClick={() => setSelected(index)}
-                    />
-                  ))}
-                </AnimateSharedLayout>
-              </Box>
-            </div>
+            <Box sx={{ display: "flex", flexDirection: "row" }}>
+              <AnimateSharedLayout>
+                {navItems.map((item, index) => (
+                  <NavItem
+                    text={item}
+                    key={index}
+                    selected={selected === index}
+                    onClick={() => setSelected(index)}
+                  />
+                ))}
+              </AnimateSharedLayout>
+            </Box>
           )}
           <MotionButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <a

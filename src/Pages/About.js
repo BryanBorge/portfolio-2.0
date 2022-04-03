@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { List, Typography } from "@mui/material";
 import CustomListItem from "../Components/CustomListItem/CustomListItem";
-import { PRIMARY_COLOR, SECONDARY_COLOR } from "../theme/contants";
+import { PRIMARY_COLOR } from "../theme/contants";
 import { motion } from "framer-motion";
 const AboutMe = () => {
   return (
@@ -23,7 +23,7 @@ const AboutMe = () => {
           initial={{ opacity: 0 }}>
           <Typography gutterBottom variant="p">
             Although I gratuated from{" "}
-            <a href="https://www.farmingdale.edu/" target="_blank" rel="noopener">
+            <a href="https://www.farmingdale.edu/" target="_blank" rel="noreferrer">
               SUNY Farmingdale
             </a>{" "}
             with a B.S. in Computer Programming and Information Systems I am a self-taught web developer
@@ -32,15 +32,15 @@ const AboutMe = () => {
           <br />
           <Typography gutterBottom variant="p">
             I have had the opportunity to lead the development of a mobile application for an{" "}
-            <a href="https://www.manickatrecords.com/" target="_blank" rel="noopener">
+            <a href="https://www.manickatrecords.com/" target="_blank" rel="noreferrer">
               independent record label
             </a>
             . Currently I'm working at{" "}
-            <a href="https://www.avi.com/" target="_blank" rel="noopener">
+            <a href="https://www.avi.com/" target="_blank" rel="noreferrer">
               Applied Visions{" "}
             </a>
             as a Front End Developer building responsive and{" "}
-            <a href="https://mealtrack.com/" target="_blank" rel="noopener">
+            <a href="https://mealtrack.com/" target="_blank" rel="noreferrer">
               highly configurable software
             </a>{" "}
             for a variety of clients.

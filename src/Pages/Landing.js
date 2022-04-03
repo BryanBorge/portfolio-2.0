@@ -28,7 +28,7 @@ const Landing = () => {
             initial={{ opacity: 0 }}
             animate={{ scale: [1.1, 0.9, 1] }}>
             <MotionButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <a href="https://github.com/BryanBorge" target="_blank" rel="noopener">
+              <a href="https://github.com/BryanBorge" target="_blank"  rel="noreferrer">
                 <Button color="secondary" variant="outlined" style={{ width: "225px", height: "50px" }}>
                   Check out my GitHub
                 </Button>

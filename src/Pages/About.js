@@ -93,6 +93,7 @@ const AboutMe = () => {
         animate={{ scale: [1, 1.1, 0.9, 1], opacity: [0, 1] }}>
         <div
           style={{
+            marginTop: '60px',
             display: "flex",
             justifyContent: "center",
             alignItems: "center",

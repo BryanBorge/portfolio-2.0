@@ -8,12 +8,14 @@ const ContentLayout = () => {
   return (
     <>
       <LandingSection>
-        <Landing />
+        <Landing  id="Landing"/>
       </LandingSection>
-      <Section>
+
+      <Section id="About">
         <AboutMe />
       </Section>
-      <Section>
+
+      <Section id="Experience">
         <Experience />
       </Section>
     </>
@@ -24,15 +26,15 @@ export default ContentLayout;
 
 const LandingSection = styled.div`
   display: flex;
-  height: 100vh;
+  height: 1000px;
   justify-content: center;
-  align-items: center;
-  min-height: -webkit-fill-available;
+  align-items: flex-start;
 `;
 
 const Section = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 1000px;
   min-height: -webkit-fill-available;
 `;

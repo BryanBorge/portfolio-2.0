@@ -9,10 +9,11 @@ import { useMediaQuery } from "@mui/material";
 import NavItem from "../NavItem/NavItem";
 import MotionButton from "../../MotionButton/MotionButton";
 import { AnimateSharedLayout } from "framer-motion";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const mediumViewport = useMediaQuery("(min-width:768px)");
-  const navItems = ["About", "Experience", "Projects"];
+  const navItems = ["About", "Experience"];
   const [selected, setSelected] = useState(null);
 
   return (
@@ -29,13 +30,21 @@ const Header = () => {
           {mediumViewport && (
             <Box sx={{ display: "flex", flexDirection: "row" }}>
               <AnimateSharedLayout>
+                <Link to="Landing" spy={true} onSetActive={() => setSelected(null)} />
                 {navItems.map((item, index) => (
-                  <NavItem
-                    text={item}
-                    key={index}
-                    selected={selected === index}
-                    onClick={() => setSelected(index)}
-                  />
+                  <Link
+                    to={item}
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    onSetActive={() => setSelected(index)}>
+                    <NavItem
+                      text={item}
+                      key={index}
+                      selected={selected === index}
+                      onClick={() => setSelected(index)}
+                    />
+                  </Link>
                 ))}
               </AnimateSharedLayout>
             </Box>

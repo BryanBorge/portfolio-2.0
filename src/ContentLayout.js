@@ -3,21 +3,27 @@ import AboutMe from "./Pages/About";
 import Experience from "./Pages/Experience";
 import Landing from "./Pages/Landing";
 import styled from "styled-components";
-
+import { Element } from "react-scroll";
 const ContentLayout = () => {
   return (
     <>
-      <LandingSection>
-        <Landing  id="Landing"/>
-      </LandingSection>
+      <Element name="Landing">
+        <LandingSection>
+          <Landing />
+        </LandingSection>
+      </Element>
 
-      <Section id="About">
-        <AboutMe />
-      </Section>
+      <Element name="About">
+        <Section>
+          <AboutMe />
+        </Section>
+      </Element>
 
-      <Section id="Experience">
-        <Experience />
-      </Section>
+      <Element name="Experience">
+        <Section>
+          <Experience />
+        </Section>
+      </Element>
     </>
   );
 };
@@ -36,5 +42,4 @@ const Section = styled.div`
   justify-content: center;
   align-items: center;
   height: 1000px;
-  min-height: -webkit-fill-available;
 `;

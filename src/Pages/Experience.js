@@ -35,7 +35,7 @@ const Experience = () => {
           height: "400px",
           width: "100%",
         }}
-        sx={{ mb: 20 }}>
+        sx={{ mb: 20, mt: mediumViewport ? 20 : 10 }}>
         <Tabs
           orientation={mediumViewport ? "vertical" : "horizontal"}
           value={value}

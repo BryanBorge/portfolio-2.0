@@ -3,10 +3,18 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { Typography } from "@mui/material";
 import MotionButton from "../Components/MotionButton/MotionButton";
+import { useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
+
 const Landing = () => {
+  const mediumViewport = useMediaQuery("screen and (min-width:768px)");
+
   return (
-    <Box display="flex" alignItems="center" justifyContent="center" sx={{ ml: 10, mr: 10, mt: 5, mb: 20 }}>
+    <Box
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      sx={{ ml: 10, mr: 10, mt: mediumViewport ? 30 : 10 }}>
       <motion.div animate={{ y: [-200, 0], opacity: [0, 1] }}>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", height: "100%" }}>
           <Typography variant="h5" gutterBottom color="secondary">
@@ -28,7 +36,7 @@ const Landing = () => {
             initial={{ opacity: 0 }}
             animate={{ scale: [1.1, 0.9, 1] }}>
             <MotionButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <a href="https://github.com/BryanBorge" target="_blank"  rel="noreferrer">
+              <a href="https://github.com/BryanBorge" target="_blank" rel="noreferrer">
                 <Button color="secondary" variant="outlined" style={{ width: "225px", height: "50px" }}>
                   Check out my GitHub
                 </Button>

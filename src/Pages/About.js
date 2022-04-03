@@ -5,7 +5,11 @@ import { List, Typography } from "@mui/material";
 import CustomListItem from "../Components/CustomListItem/CustomListItem";
 import { PRIMARY_COLOR } from "../theme/contants";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "@mui/material";
+
 const AboutMe = () => {
+  const mediumViewport = useMediaQuery("(min-width:768px)");
+
   return (
     <Box
       display="flex"
@@ -13,14 +17,18 @@ const AboutMe = () => {
       justifyContent="space-evenly"
       flexWrap="wrap"
       style={{ width: "100%" }}
-      sx={{ ml: 5, mr: 5, mb: 20 }}>
+      sx={{ ml: 5, mr: 5, mb: 20, mt: mediumViewport ? 30 : 10 }}>
       <div style={{ maxWidth: "700px", display: "flex", flexDirection: "column", marginBottom: "20px" }}>
         <motion.div
           style={{ display: "flex", flexDirection: "column" }}
           transition={{ duration: 1 }}
-          whileInView={{ opacity: 1 }}
+          whileInView="visible"
           viewport={{ once: true }}
-          initial={{ opacity: 0 }}>
+          initial="hidden"
+          variants={{
+            visible: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}>
           <Typography gutterBottom variant="p">
             Although I gratuated from{" "}
             <a href="https://www.farmingdale.edu/" target="_blank" rel="noreferrer">

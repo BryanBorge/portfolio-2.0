@@ -1,16 +1,20 @@
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import React from "react";
 import { styled } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import NavItem from "../NavItem/NavItem";
 import MotionButton from "../../MotionButton/MotionButton";
+import { AnimateSharedLayout } from "framer-motion";
+import classes from "../Navigation.module.css";
 
 const Header = () => {
   const mediumViewport = useMediaQuery("(min-width:768px)");
+  const navItems = ["About", "Experience", "Projects"];
+  const [selected, setSelected] = useState(null);
 
   return (
     <Box sx={{ flexGrow: 1, pb: 3 }}>
@@ -24,17 +28,26 @@ const Header = () => {
             BB
           </Typography>
           {mediumViewport && (
-            <Box sx={{ display: "flex", flexDirection: "row" }}>
-              <NavItem text="About" />
-              <NavItem text="Experience" />
-              <NavItem text="Projects" />
-            </Box>
+            <div className={classes.underlinedMenu}>
+              <Box sx={{ display: "flex", flexDirection: "row" }}>
+                <AnimateSharedLayout>
+                  {navItems.map((item, index) => (
+                    <NavItem
+                      text={item}
+                      key={index}
+                      selected={selected === index}
+                      onClick={() => setSelected(index)}
+                    />
+                  ))}
+                </AnimateSharedLayout>
+              </Box>
+            </div>
           )}
           <MotionButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <a
               href="https://docs.google.com/document/d/1ZaOCL9HNV2RNFFeiTGApiCXvs2RKhgyno198-pxQPgQ/edit?usp=sharing"
               target="_blank"
-              rel="noopener">
+              rel="noreferrer">
               <Button color="secondary" variant="outlined" style={{ textTransform: "none !important" }}>
                 Resume
               </Button>

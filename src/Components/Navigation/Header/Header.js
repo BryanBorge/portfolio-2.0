@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <Box sx={{ flexGrow: 1, pb: 8 }}>
-      <StyledAppBar
+      <AppBar
         position="fixed"
         style={{ backgroundColor: "rgb(36, 35, 51, .8)" }}
         elevation={0}
@@ -56,13 +56,9 @@ const Header = () => {
             </LinkTo>
           </MotionButton>
         </Toolbar>
-      </StyledAppBar>
+      </AppBar>
     </Box>
   );
 };
 
 export default Header;
-
-const StyledAppBar = styled(AppBar)({
-  backgroundColor: "rgba(255,255,255, 0.85)",
-});

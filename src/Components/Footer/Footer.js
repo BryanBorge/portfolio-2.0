@@ -31,36 +31,38 @@ const Footer = () => {
             Long Island, New York
           </Button>
           <Button startIcon={<EmailIcon color="secondary" />} style={{ textTransform: "none" }}>
-            BryanBorgesano98@gmail.com
+            BryanBorgesano97@gmail.com
           </Button>
         </Box>
         <Box display="flex" flexDirection="column" style={{ margin: "10px" }}>
           <TextContainer style={{ width: "300px" }}>
-            <Stack direction="row" alignItems="center" spacing={8}>
+            <Stack direction="row" alignItems="center" spacing={1}>
               <Typography
                 variant="p"
                 gutterBottom
                 color="secondary"
                 style={{ fontWeight: "bold", paddingTop: "6px" }}>
-                Get in touch
+                Connect with me
               </Typography>
               <Stack direction="row" alignItems="center" spacing={1}>
                 {SocialIcons}
               </Stack>
             </Stack>
-            <Typography variant="p" fontSize="16px">
-              Thanks for checking out my site. Feel free to connect and react out to me on my socials!
-            </Typography>
+            <Box
+              justifyContent="center"
+              display="flex"
+              flexDirection="column"
+              alignItems="flex-start"
+              sx={{ pb: 2 }}>
+              <Typography variant="p" fontSize="12px" style={{ opacity: 0.5 }}>
+                Designed and Developed By Bryan Borgesano
+              </Typography>
+              <Typography variant="p" fontSize="12px" style={{ opacity: 0.5 }}>
+                Last updated: 4/10/2022, 9:56:42 PM
+              </Typography>
+            </Box>
           </TextContainer>
         </Box>
-      </Box>
-      <Box justifyContent="center" display="flex" flexDirection="column" alignItems="center" sx={{ p: 3 }}>
-        <Typography variant="p" fontSize="12px" style={{ opacity: 0.5 }}>
-          Designed and Developed By Bryan Borgesano
-        </Typography>
-        <Typography variant="p" fontSize="12px" style={{ opacity: 0.5 }}>
-          Last updated: 4/9/2022, 11:06:42 PM
-        </Typography>
       </Box>
     </Box>
   );

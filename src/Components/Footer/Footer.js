@@ -48,19 +48,21 @@ const Footer = () => {
                 {SocialIcons}
               </Stack>
             </Stack>
-            <Box
-              justifyContent="center"
-              display="flex"
-              flexDirection="column"
-              alignItems="flex-start"
-              sx={{ pb: 2 }}>
-              <Typography variant="p" fontSize="12px" style={{ opacity: 0.5 }}>
-                Designed and Developed By Bryan Borgesano
-              </Typography>
-              <Typography variant="p" fontSize="12px" style={{ opacity: 0.5 }}>
-                Last updated: 4/10/2022, 9:56:42 PM
-              </Typography>
-            </Box>
+            <LinkTo to="https://github.com/BryanBorge/portfolio-2.0">
+              <Box
+                justifyContent="center"
+                display="flex"
+                flexDirection="column"
+                alignItems="flex-start"
+                sx={{ pb: 2 }}>
+                <Typography variant="p" fontSize="12px" style={{ opacity: 0.5 }}>
+                  Designed and Developed By Bryan Borgesano
+                </Typography>
+                <Typography variant="p" fontSize="12px" style={{ opacity: 0.5 }}>
+                  Last updated: 4/10/2022, 9:56:42 PM
+                </Typography>
+              </Box>
+            </LinkTo>
           </TextContainer>
         </Box>
       </Box>

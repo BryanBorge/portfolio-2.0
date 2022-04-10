@@ -59,7 +59,7 @@ const Footer = () => {
                   Designed and Developed By Bryan Borgesano
                 </Typography>
                 <Typography variant="p" fontSize="12px" style={{ opacity: 0.5 }}>
-                  Last updated: 4/10/2022, 10:06:24 PM
+                  Last updated: 4/10/2022, 10:06:24 AM
                 </Typography>
               </Box>
             </LinkTo>

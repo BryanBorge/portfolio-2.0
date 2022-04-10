@@ -3,7 +3,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { styled } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import NavItem from "../NavItem/NavItem";
 import MotionButton from "../../MotionButton/MotionButton";

@@ -5,6 +5,7 @@ import { Typography } from "@mui/material";
 import MotionButton from "../Components/MotionButton/MotionButton";
 import { useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
+import PrimaryButton from "../Components/PrimaryButton";
 
 const Landing = () => {
   const mediumViewport = useMediaQuery("screen and (min-width:768px)");
@@ -37,9 +38,9 @@ const Landing = () => {
             animate={{ scale: [1.1, 0.9, 1] }}>
             <MotionButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <a href="https://github.com/BryanBorge" target="_blank" rel="noreferrer">
-                <Button color="secondary" variant="outlined" style={{ width: "225px", height: "50px" }}>
+                <PrimaryButton style={{ width: "225px", height: "50px" }}>
                   Check out my GitHub
-                </Button>
+                </PrimaryButton>
               </a>
             </MotionButton>
           </motion.div>

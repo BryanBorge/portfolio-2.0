@@ -134,4 +134,5 @@ export default Experience;
 
 const CustomTab = styled(Tab)`
   color: #ffffff !important;
+  text-transform: none
 `;

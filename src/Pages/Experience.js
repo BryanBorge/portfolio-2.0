@@ -27,7 +27,7 @@ const Experience = () => {
 
   const punkHubDownloadText = (
     <span>
-      You can download PunkHubLive on the{" "}
+      You can download Punk Hub Live on the{" "}
       <LinkTo to="https://apps.apple.com/us/app/punk-hub-live/id1612384566">App Store </LinkTo> and{" "}
       <LinkTo to="https://play.google.com/store/apps/details?id=com.manickatrecords.punkhublive">
         Google Play

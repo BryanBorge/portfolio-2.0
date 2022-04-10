@@ -9,6 +9,6 @@
   <a href="https://github.com/BryanBorge/portfolio" target="_blank">1.0</a>
 </p>
 <p align="center">
- 2.0 will be hosted on its own domain. No more github.io.
+ 2.0 is hosted on Netlify using a custom domain 
 </p>
 

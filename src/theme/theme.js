@@ -5,71 +5,60 @@ export const theme = {
   typography: {
     h1: {
       fontFamily: "Poppins",
-      color: "#FFFFFF",
+      color: PRIMARY_COLOR,
     },
     h2: {
       fontFamily: "Poppins",
-      color: "#FFFFFF",
+      color: PRIMARY_COLOR,
     },
     h3: {
       fontFamily: "Poppins",
-      color: "#FFFFFF",
+      color: PRIMARY_COLOR,
     },
     h4: {
       fontFamily: "Poppins",
-      color: "#FFFFFF",
+      color: PRIMARY_COLOR,
     },
     h5: {
       fontFamily: "Poppins",
-      color: "#FFFFFF",
+      color: PRIMARY_COLOR,
     },
     h6: {
       fontFamily: "Poppins",
-      color: "#FFFFFF",
+      color: PRIMARY_COLOR,
     },
     p: {
       fontFamily: "Poppins",
       fontSize: "18px",
-      color: "#FFFFFF",
+      color: PRIMARY_COLOR,
     },
     subtitle1: {
       fontFamily: "Poppins",
-      color: "#FFFFFF",
+      color: PRIMARY_COLOR,
     },
     subtitle2: {
       fontFamily: "Poppins",
-      color: "#FFFFFF",
+      color: PRIMARY_COLOR,
     },
     body1: {
       fontFamily: "Poppins",
       fontSize: "16px",
-      color: "#FFFFFF",
+      color: PRIMARY_COLOR,
     },
     body2: {
       fontFamily: "Poppins",
-      color: "#FFFFFF",
+      color: PRIMARY_COLOR,
     },
     button: {
       fontFamily: "Poppins",
     },
     caption: {
       fontFamily: "Poppins",
-      color: "#FFFFFF",
+      color: PRIMARY_COLOR,
     },
     overline: {
       fontFamily: "Poppins",
-      color: "#FFFFFF",
-    },
-  },
-  overrides: {
-    MuiTab: {
-      styleOverrides: {
-        root: {
-          "&.MuiButtonBase-root.MuiTab-root": {
-            fontSize: "20px",
-          },
-        },
-      },
+      color: PRIMARY_COLOR,
     },
   },
 };

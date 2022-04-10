@@ -4,6 +4,7 @@ import Experience from "./Pages/Experience";
 import Landing from "./Pages/Landing";
 import styled from "styled-components";
 import { Element } from "react-scroll";
+import Footer from "./Components/Footer/Footer";
 const ContentLayout = () => {
   return (
     <>
@@ -24,6 +25,8 @@ const ContentLayout = () => {
           <Experience />
         </Section>
       </Element>
+      <Footer />
+      
     </>
   );
 };

@@ -6,6 +6,7 @@ import MotionButton from "../Components/MotionButton/MotionButton";
 import { useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import PrimaryButton from "../Components/PrimaryButton";
+import LinkTo from "../Components/LinkTo";
 
 const Landing = () => {
   const mediumViewport = useMediaQuery("screen and (min-width:768px)");
@@ -37,11 +38,9 @@ const Landing = () => {
             initial={{ opacity: 0 }}
             animate={{ scale: [1.1, 0.9, 1] }}>
             <MotionButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <a href="https://github.com/BryanBorge" target="_blank" rel="noreferrer">
-                <PrimaryButton style={{ width: "225px", height: "50px" }}>
-                  Check out my GitHub
-                </PrimaryButton>
-              </a>
+              <LinkTo to="https://github.com/BryanBorge">
+                <PrimaryButton style={{ width: "225px", height: "50px" }}>Check out my GitHub</PrimaryButton>
+              </LinkTo>
             </MotionButton>
           </motion.div>
         </div>

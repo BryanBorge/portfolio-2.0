@@ -10,6 +10,7 @@ import MotionButton from "../../MotionButton/MotionButton";
 import { AnimateSharedLayout } from "framer-motion";
 import { Link } from "react-scroll";
 import PrimaryButton from "../../PrimaryButton";
+import LinkTo from "../../LinkTo";
 
 const Header = () => {
   const mediumViewport = useMediaQuery("(min-width:768px)");
@@ -50,14 +51,9 @@ const Header = () => {
             </Box>
           )}
           <MotionButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <a
-              href="https://docs.google.com/document/d/1ZaOCL9HNV2RNFFeiTGApiCXvs2RKhgyno198-pxQPgQ/edit?usp=sharing"
-              target="_blank"
-              rel="noreferrer">
-              <PrimaryButton>
-                Resume
-              </PrimaryButton>
-            </a>
+            <LinkTo to="https://docs.google.com/document/d/1ZaOCL9HNV2RNFFeiTGApiCXvs2RKhgyno198-pxQPgQ/edit?usp=sharing">
+              <PrimaryButton>Resume</PrimaryButton>
+            </LinkTo>
           </MotionButton>
         </Toolbar>
       </StyledAppBar>

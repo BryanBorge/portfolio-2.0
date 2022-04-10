@@ -8,6 +8,7 @@ import { useMediaQuery } from "@mui/material";
 import CustomListItem from "../Components/CustomListItem/CustomListItem";
 import styled from "styled-components";
 import { SECONDARY_COLOR } from "../theme/contants";
+import LinkTo from "../Components/LinkTo";
 
 const TabPanel = props => {
   const { children, value, index } = props;
@@ -23,6 +24,17 @@ const Experience = () => {
   };
 
   const mediumViewport = useMediaQuery("(min-width:768px)");
+
+  const punkHubDownloadText = (
+    <span>
+      You can download PunkHubLive on the{" "}
+      <LinkTo to="https://apps.apple.com/us/app/punk-hub-live/id1612384566">App Store </LinkTo> and{" "}
+      <LinkTo to="https://play.google.com/store/apps/details?id=com.manickatrecords.punkhublive">
+        Google Play
+      </LinkTo>{" "}
+      store
+    </span>
+  );
 
   return (
     <>
@@ -88,6 +100,7 @@ const Experience = () => {
               maxWidth="600px"
             />
             <CustomListItem text="Successfully intergrated payments using Stripe API" maxWidth="600px" />
+            <CustomListItem text={punkHubDownloadText} maxWidth="600px" />
           </List>
         </TabPanel>
         <TabPanel value={value} index={2}>
@@ -134,5 +147,5 @@ export default Experience;
 
 const CustomTab = styled(Tab)`
   color: #ffffff !important;
-  text-transform: none
+  text-transform: none;
 `;

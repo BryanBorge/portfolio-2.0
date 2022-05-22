@@ -27,12 +27,19 @@ const Footer = () => {
     <Box style={{ width: "100%", backgroundColor: "#444260" }}>
       <Box display="flex" justifyContent="space-evenly" alignItems="flexStart" flexWrap="wrap" sx={{ pt: 2 }}>
         <Box display="flex" alignItems="flex-start" flexDirection="column" style={{ margin: "10px" }}>
-          <Button startIcon={<LocationOnIcon color="secondary" />} style={{ textTransform: "none" }}>
-            Long Island, New York
-          </Button>
-          <Button startIcon={<EmailIcon color="secondary" />} style={{ textTransform: "none" }}>
-            BryanBorgesano97@gmail.com
-          </Button>
+          <LinkTo to="https://www.google.com/maps/place/Long+Island/">
+            <Button startIcon={<LocationOnIcon color="secondary" />} style={{ textTransform: "none" }}>
+              Long Island, New York
+            </Button>
+          </LinkTo>
+          <LinkTo to="mailto:BryanBorgesano97@gmail.com">
+            <Button
+              startIcon={<EmailIcon color="secondary" />}
+              style={{ textTransform: "none" }}
+              type="email">
+              BryanBorgesano97@gmail.com
+            </Button>
+          </LinkTo>
         </Box>
         <Box display="flex" flexDirection="column" style={{ margin: "10px" }}>
           <TextContainer style={{ width: "300px" }}>
@@ -59,7 +66,7 @@ const Footer = () => {
                   Designed and Developed By Bryan Borgesano
                 </Typography>
                 <Typography variant="p" fontSize="12px" style={{ opacity: 0.5 }}>
-                  Last updated: 4/10/2022, 10:19:24 AM
+                  Last updated: 5/21/2022
                 </Typography>
               </Box>
             </LinkTo>

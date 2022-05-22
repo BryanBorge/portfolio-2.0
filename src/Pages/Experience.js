@@ -71,7 +71,7 @@ const Experience = () => {
           <Typography variant="p">June 2021 - Present</Typography>
           <List dense>
             <CustomListItem
-              text="Primarily create and style components while implementing front end functionality and modifying the backend accordingly to the requirements of our mock ups and fulfill our user stories"
+              text="Primarily create and style components while implementing front end functionality and modifying the back end accordingly to meet the requirements of our mock ups and fulfill our user stories"
               maxWidth="600px"
             />
             <CustomListItem text="Mainly utilize React with Typescript and Material UI" maxWidth="600px" />

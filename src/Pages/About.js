@@ -31,9 +31,9 @@ const AboutMe = () => {
             hidden: { opacity: 0 },
           }}>
           <Typography gutterBottom variant="p">
-            Although I gratuated from <LinkTo to="https://www.farmingdale.edu/">SUNY Farmingdale</LinkTo> with
-            a B.S. in Computer Programming and Information Systems I am a self-taught web developer
-            specializing in React.
+            Although I graduated from <LinkTo to="https://www.farmingdale.edu/">SUNY Farmingdale</LinkTo> with
+            a B.S. in Computer Programming and Information Systems, I am a self-taught web developer
+            specializing in <LinkTo to="https://reactjs.org/"> React</LinkTo>
           </Typography>
           <br />
           <Typography gutterBottom variant="p">
@@ -57,9 +57,10 @@ const AboutMe = () => {
               transition={{ delay: 2 }}
               animate={{ x: [-100, 0], opacity: [0, 1] }}>
               <List>
-                <CustomListItem text="Javascript (jQuery, ES6)" />
                 <CustomListItem text="React" />
+                <CustomListItem text="Typescript" />
                 <CustomListItem text="Material UI" />
+                <CustomListItem text="jQuery" />
               </List>
             </motion.div>
           </Grid>
@@ -71,7 +72,8 @@ const AboutMe = () => {
               <List>
                 <CustomListItem text="Git / BitBucket" />
                 <CustomListItem text="SQL Server" />
-                <CustomListItem text="C# ASP.Net" />
+                <CustomListItem text="ASP.NET" />
+                <CustomListItem text=".NET Core" />
               </List>
             </motion.div>
           </Grid>

@@ -64,22 +64,23 @@ const Experience = () => {
           <CustomTab label="Rink Management Services" />
         </Tabs>
         <TabPanel value={value} index={0}>
-          <Typography variant="h5">Frontend Developer</Typography>
+          <Typography variant="h5">Front End Developer</Typography>
           <Typography variant="h6" color="secondary">
             Applied Visions
           </Typography>
           <Typography variant="p">June 2021 - Present</Typography>
           <List dense>
             <CustomListItem
-              text="Primarily create and style front end components while implementing new functionality and bug fixes according to requirements and user stories"
+              text="Primarily create and style components while implementing front end functionality and modifying the backend accordingly to the requirements of our mock ups and fulfill our user stories"
+              maxWidth="600px"
+            />
+            <CustomListItem text="Mainly utilize React with Typescript and Material UI" maxWidth="600px" />
+            <CustomListItem
+              text="Often maintain and periodically create new features in jQuery"
               maxWidth="600px"
             />
             <CustomListItem
-              text="Member of a team of 12 people that work closely with QA and Product Specialists"
-              maxWidth="600px"
-            />
-            <CustomListItem
-              text="Mostly utilize React with Material UI, JQuery and C# ASP.Net"
+              text="Member of a team of 12 that works closely with QA and Product Specialists"
               maxWidth="600px"
             />
           </List>

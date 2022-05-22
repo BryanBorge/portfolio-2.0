@@ -4,18 +4,19 @@ import { Typography } from "@mui/material";
 import MotionButton from "../Components/MotionButton/MotionButton";
 import { useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
-import PrimaryButton from "../Components/PrimaryButton";
-import LinkTo from "../Components/LinkTo";
+import ArrowCircleDownOutlinedIcon from "@mui/icons-material/ArrowCircleDownOutlined";
+import IconButton from "@mui/material/IconButton";
+import { scroller } from "react-scroll";
 
 const Landing = () => {
-  const mediumViewport = useMediaQuery("screen and (min-width:768px)");
-
+  const largerDevices = useMediaQuery("(min-width:768px)");
+  const smallerMobileDevices = useMediaQuery("(max-width:767px)");
   return (
     <Box
       display="flex"
       alignItems="center"
       justifyContent="center"
-      sx={{ ml: 10, mr: 10, mt: mediumViewport ? 30 : 10 }}>
+      sx={{ ml: 10, mr: 10, mt: largerDevices ? 30 : 10 }}>
       <motion.div animate={{ y: [-200, 0], opacity: [0, 1] }}>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", height: "100%" }}>
           <Typography variant="h5" gutterBottom color="secondary">
@@ -37,9 +38,18 @@ const Landing = () => {
             initial={{ opacity: 0 }}
             animate={{ scale: [1.1, 0.9, 1] }}>
             <MotionButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <LinkTo to="https://github.com/BryanBorge">
-                <PrimaryButton style={{ width: "225px", height: "50px" }}>Check out my GitHub</PrimaryButton>
-              </LinkTo>
+              <IconButton
+                color="secondary"
+                onClick={() =>
+                  scroller.scrollTo("About", {
+                    duration: 800,
+                    delay: 0,
+                    offset: smallerMobileDevices && -200,
+                    smooth: "easeInOutQuart",
+                  })
+                }>
+                <ArrowCircleDownOutlinedIcon sx={{ fontSize: "40px" }} />
+              </IconButton>
             </MotionButton>
           </motion.div>
         </div>

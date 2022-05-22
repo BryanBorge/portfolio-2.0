@@ -44,7 +44,7 @@ const Landing = () => {
                   scroller.scrollTo("About", {
                     duration: 800,
                     delay: 0,
-                    offset: smallerMobileDevices && -200,
+                    offset: smallerMobileDevices && -260,
                     smooth: "easeInOutQuart",
                   })
                 }>

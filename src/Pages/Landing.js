@@ -1,29 +1,59 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import { TEAL, DARKER_TEAL, DARK_BLUE, OFF_GRAY, DEFAULT_TEXT_COLOR, WHITE, GRAY } from "../constants";
-import Button from "@mui/material/Button";
 import { Typography } from "@mui/material";
+import MotionButton from "../Components/MotionButton/MotionButton";
+import { useMediaQuery } from "@mui/material";
+import { motion } from "framer-motion";
+import ArrowCircleDownOutlinedIcon from "@mui/icons-material/ArrowCircleDownOutlined";
+import IconButton from "@mui/material/IconButton";
+import { scroller } from "react-scroll";
 
 const Landing = () => {
+  const largerDevices = useMediaQuery("(min-width:768px)");
+  const smallerMobileDevices = useMediaQuery("(max-width:767px)");
   return (
-    <Box display="flex" alignItems="center" justifyContent="center" sx={{ ml: 10, mr: 10, mt: 30, mb: 30 }}>
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", height: "100%" }}>
-        <Typography variant="p" style={{ marginBottom: "0" }}>
-          Hi, my name is
-        </Typography>
-        <Typography variant="h3" style={{ marginTop: "0", marginBottom: "0" }}>
-          Bryan Borgesano.
-        </Typography>
-        <div style={{ maxWidth: "540px", marginTop: '20px', marginBottom: '20px'}}>
-          <Typography variant="p">
-            I'm a software developer specializing in building responsive web based experiences. Currently, I'm
-            focused on building highly configurable and robust software at <a href="">Applied Visions</a>
+    <Box
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      sx={{ ml: 10, mr: 10, mt: largerDevices ? 30 : 10 }}>
+      <motion.div animate={{ y: [-200, 0], opacity: [0, 1] }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", height: "100%" }}>
+          <Typography variant="h5" gutterBottom color="secondary">
+            Hi, my name is
           </Typography>
+          <Typography variant="h3" style={{ fontSize: "60px" }} gutterBottom>
+            Bryan Borgesano.
+          </Typography>
+          <div style={{ maxWidth: "540px", paddingBottom: "25px" }}>
+            <Typography variant="p">
+              I'm a New York based Software Developer specializing in building responsive web based
+              experiences.
+            </Typography>
+          </div>
+          <motion.div
+            transition={{ delay: 0.5 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            initial={{ opacity: 0 }}
+            animate={{ scale: [1.1, 0.9, 1] }}>
+            <MotionButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <IconButton
+                color="secondary"
+                onClick={() =>
+                  scroller.scrollTo("About", {
+                    duration: 800,
+                    delay: 0,
+                    offset: smallerMobileDevices && -260,
+                    smooth: "easeInOutQuart",
+                  })
+                }>
+                <ArrowCircleDownOutlinedIcon sx={{ fontSize: "40px" }} />
+              </IconButton>
+            </MotionButton>
+          </motion.div>
         </div>
-        <Button color="inherit" variant="outlined">
-          Check out my GitHub!
-        </Button>
-      </div>
+      </motion.div>
     </Box>
   );
 };
